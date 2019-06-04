@@ -29,6 +29,8 @@ function filter(arr, fn) {
   return newArray;
 }
 
+//Can you invoke the filter function and immediately log the result using a single line of code and arrow functions
+console.log(filter(myNames, name => name[0] === 'R'))
 
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
@@ -42,7 +44,7 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames); // => ['Rich', 'Ray']
+//console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 //-------------------------------------------------------------------------
