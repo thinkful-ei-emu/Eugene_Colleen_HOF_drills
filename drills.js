@@ -72,8 +72,36 @@ fireWarning('Boston Ave N and Acton St');
 
 const turtleMovement = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 const positiveMovement = turtleMovement.filter(steps => steps[0] >= 0 && steps[1] >=0);
-console.log(positiveMovement)
+console.log(positiveMovement);
 
-const totalSteps = turtleMovement.map(steps => Math.abs(steps[0]) + Math.abs(steps [1]))
+const totalSteps = positiveMovement.map(steps => Math.abs(steps[0]) + Math.abs(steps [1]));
 
-totalSteps.forEach(steps => console.log(steps))
+totalSteps.forEach(steps => console.log(steps));
+//Movement #1: 3 steps
+//Movement #2: 1 step
+
+totalSteps.forEach(function(value, index){
+    
+  let plural = 'step';
+  if (value !== 1){
+    plural = 'steps';
+  }
+    
+  console.log(`Movement #${index + 1}: ${value} ${plural}`);
+});
+
+//----------------------------------------
+
+let wordsToDecode = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const newArray = wordsToDecode.split(' ');
+
+let decoded = newArray.reduce(function(decodedMessage, word){
+  if (word.length === 3){
+    return decodedMessage + ' ';
+  } else {
+    return decodedMessage + word[word.length-1].toUpperCase();
+  }
+},'');
+
+
+
