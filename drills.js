@@ -29,7 +29,7 @@ function filter(arr, fn) {
   return newArray;
 }
 
-filter(myNames);
+
 // DO NOT EDIT BETWEEN THESE LINES, BUT DO READ THE CODE ----->
 // First we setup an array of strings we plan to filter:
 const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
@@ -66,3 +66,14 @@ waterWarning('198th NE and 128th NW');
 waterWarning('Bob street and First Ave');
 fireWarning('Mountain Street and River Way');
 fireWarning('Boston Ave N and Acton St');
+
+//-------------------------------------------------------------------------
+
+
+const turtleMovement = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+const positiveMovement = turtleMovement.filter(steps => steps[0] >= 0 && steps[1] >=0);
+console.log(positiveMovement)
+
+const totalSteps = turtleMovement.map(steps => Math.abs(steps[0]) + Math.abs(steps [1]))
+
+totalSteps.forEach(steps => console.log(steps))
